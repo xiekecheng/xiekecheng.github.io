@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      638 字
+      634 字
     </span>
   
 
@@ -230,78 +230,56 @@
             <h1 style="display: none">build-hexo</h1>
             
             <div class="markdown-body">
-              <h1 id="Mac环境下基于hexo-github搭建个人博客"><a href="#Mac环境下基于hexo-github搭建个人博客" class="headerlink" title="Mac环境下基于hexo+github搭建个人博客"></a>Mac环境下基于hexo+github搭建个人博客</h1><h2 id="1安装HomeBrew"><a href="#1安装HomeBrew" class="headerlink" title="1安装HomeBrew"></a><code>1安装HomeBrew</code></h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+              <h1 id="Mac环境下基于hexo-github搭建个人博客"><a href="#Mac环境下基于hexo-github搭建个人博客" class="headerlink" title="Mac环境下基于hexo+github搭建个人博客"></a>Mac环境下基于hexo+github搭建个人博客</h1><h2 id="1安装HomeBrew"><a href="#1安装HomeBrew" class="headerlink" title="1安装HomeBrew"></a><code>1安装HomeBrew</code></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"<br></code></pre></td></tr></tbody></table></figure>
 
 <p>查看是否安装成功: brew –version</p>
 <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>用brew安装Git,如果已安装,则忽略该步骤</p>
-<pre class="line-numbers language-none"><code class="language-none">git --version //查看是否安装成功<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git --version <span class="hljs-regexp">//</span>查看是否安装成功<br></code></pre></td></tr></tbody></table></figure>
 
 <h3 id="使用brew-安装nvm"><a href="#使用brew-安装nvm" class="headerlink" title="使用brew 安装nvm"></a>使用brew 安装nvm</h3><p><code>brew install nvm</code></p>
 <h3 id="创建-nvm文件"><a href="#创建-nvm文件" class="headerlink" title="创建.nvm文件"></a>创建.nvm文件</h3><p><code>mkdir ~/.nvm</code></p>
 <p>在 ~/.bash_profile 或者 ~/.zshrc 中添加下面命令</p>
-<pre class="line-numbers language-none"><code class="language-none">export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] &amp;&amp; . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] &amp;&amp; . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> NVM_DIR=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.nvm"</span><br>[ -s <span class="hljs-string">"/usr/local/opt/nvm/nvm.sh"</span> ] &amp;&amp; . <span class="hljs-string">"/usr/local/opt/nvm/nvm.sh"</span>  <span class="hljs-comment"># This loads nvm</span><br>[ -s <span class="hljs-string">"/usr/local/opt/nvm/etc/bash_completion"</span> ] &amp;&amp; . <span class="hljs-string">"/usr/local/opt/nvm/etc/bash_completion"</span>  <span class="hljs-comment"># This loads nvm bash_completion</span><br></code></pre></td></tr></tbody></table></figure>
 
 <p>source一下</p>
-<pre class="line-numbers language-none"><code class="language-none">Source ~/.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight gradle"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">Source</span> ~/.zshrc<br></code></pre></td></tr></tbody></table></figure>
 
 <h3 id="4-安装node"><a href="#4-安装node" class="headerlink" title="4.安装node"></a>4.安装node</h3><p>通过nvm安装node</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">nvm ls-remote                   #查看node所有版本
-nvm install v12.12.0            #安装你要的版本
-nvm use v12.12.0                #使用指定的版本
-nvm alias default v12.12.0      #默认版本，每次打开终端，都自动使用该版本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">nvm ls-remote                   #查看node所有版本<br>nvm install v12.12.0            #安装你要的版本<br>nvm use v12.12.0                #使用指定的版本<br>nvm alias default v12.12.0      #默认版本，每次打开终端，都自动使用该版本<br></code></pre></td></tr></tbody></table></figure>
 
 <p>安装是否成功：node -v 、npm -v</p>
 <p>查看nvm使用帮助:</p>
-<pre class="line-numbers language-none"><code class="language-none">nvm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight ebnf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvm</span><br></code></pre></td></tr></tbody></table></figure>
 
-<h3 id="5-安装配置Hexo"><a href="#5-安装配置Hexo" class="headerlink" title="5.安装配置Hexo"></a>5.安装配置Hexo</h3><h6 id="利用npm命令安装"><a href="#利用npm命令安装" class="headerlink" title="利用npm命令安装"></a>利用npm命令安装</h6><pre class="line-numbers language-none"><code class="language-none">npm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="5-安装配置Hexo"><a href="#5-安装配置Hexo" class="headerlink" title="5.安装配置Hexo"></a>5.安装配置Hexo</h3><h6 id="利用npm命令安装"><a href="#利用npm命令安装" class="headerlink" title="利用npm命令安装"></a>利用npm命令安装</h6><figure class="highlight avrasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">npm install -g hexo-<span class="hljs-keyword">cli</span><br></code></pre></td></tr></tbody></table></figure>
 
 <h6 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h6><p>创建文件夹来存放博客 <code>mkdir [folder]</code></p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir MyHexoBlog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight arduino"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">mkdir MyHexoBlog<br></code></pre></td></tr></tbody></table></figure>
 
-<h6 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h6><pre class="line-numbers language-none"><code class="language-none">hexo init MyHexoBlog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h6 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h6><figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span> MyHexoBlog<br></code></pre></td></tr></tbody></table></figure>
 
 
 
-<h3 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h3><pre class="line-numbers language-none"><code class="language-none">hexo g
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h3><figure class="highlight ebnf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g</span><br><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></tbody></table></figure>
 
-<h3 id="本地启动效果如下"><a href="#本地启动效果如下" class="headerlink" title="本地启动效果如下:"></a>本地启动效果如下:</h3><pre class="line-numbers language-none"><code class="language-none">启动成功后，浏览器访问： http:localhost:4000<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="本地启动效果如下"><a href="#本地启动效果如下" class="headerlink" title="本地启动效果如下:"></a>本地启动效果如下:</h3><figure class="highlight livecodeserver"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">启动成功后，浏览器访问： <span class="hljs-keyword">http</span>:localhost:<span class="hljs-number">4000</span><br></code></pre></td></tr></tbody></table></figure>
 
-<h3 id="image-20210515161040198-Users-xiekecheng-Library-Application-Support-typora-user-images-image-20210515161040198-png"><a href="#image-20210515161040198-Users-xiekecheng-Library-Application-Support-typora-user-images-image-20210515161040198-png" class="headerlink" title="![image-20210515161040198](/Users/xiekecheng/Library/Application Support/typora-user-images/image-20210515161040198.png)"></a>![image-20210515161040198](/Users/xiekecheng/Library/Application Support/typora-user-images/image-20210515161040198.png)</h3><h3 id="hexo常用命令如下"><a href="#hexo常用命令如下" class="headerlink" title="hexo常用命令如下"></a>hexo常用命令如下</h3><pre class="line-numbers language-none"><code class="language-none">#服务器
-hexo init                       #初始化hexo
-hexo g                          #等于hexo generate =&gt;生成静态页面到public目录
-hexo s                          #等于hexo server =&gt;启动hexo服务，通过4000端口访问。
-hexo n 文章名称                  #等于hexo new "文章名称" =&gt;新建文章。
-hexo p                          #等于hexo publish
-hexo d                          #等于hexo deploy =&gt;目录部署到GitHub。
-
-hexo clean                      #清除缓存，网页正常情况下忽略此条命令
-hexo generate --watch           #监视文件变动
-
-hexo d -g                       #生成部署合并为一条命令<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="image-20210515161040198-Users-xiekecheng-Library-Application-Support-typora-user-images-image-20210515161040198-png"><a href="#image-20210515161040198-Users-xiekecheng-Library-Application-Support-typora-user-images-image-20210515161040198-png" class="headerlink" title="![image-20210515161040198](/Users/xiekecheng/Library/Application Support/typora-user-images/image-20210515161040198.png)"></a>![image-20210515161040198](/Users/xiekecheng/Library/Application Support/typora-user-images/image-20210515161040198.png)</h3><h3 id="hexo常用命令如下"><a href="#hexo常用命令如下" class="headerlink" title="hexo常用命令如下"></a>hexo常用命令如下</h3><figure class="highlight verilog"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs verilog">#服务器<br>hexo init                       #初始化hexo<br>hexo g                          #等于hexo <span class="hljs-keyword">generate</span> =&gt;生成静态页面到public目录<br>hexo s                          #等于hexo server =&gt;启动hexo服务，通过<span class="hljs-number">4000</span>端口访问。<br>hexo n 文章名称                  #等于hexo <span class="hljs-keyword">new</span> <span class="hljs-string">"文章名称"</span> =&gt;新建文章。<br>hexo p                          #等于hexo publish<br>hexo d                          #等于hexo deploy =&gt;目录部署到GitHub。<br><br>hexo clean                      #清除缓存，网页正常情况下忽略此条命令<br>hexo <span class="hljs-keyword">generate</span> --watch           #监视文件变动<br><br>hexo d -g                       #生成部署合并为一条命令<br></code></pre></td></tr></tbody></table></figure>
 
 <h3 id="6-关联github"><a href="#6-关联github" class="headerlink" title="6.关联github"></a>6.关联github</h3><p>github.com 申请账户</p>
 <p>创建仓库 Repository name: <code>xiekecheng.github.io</code>  与用户名一致</p>
-<h3 id="安装自动部署插件"><a href="#安装自动部署插件" class="headerlink" title="安装自动部署插件"></a>安装自动部署插件</h3><pre class="line-numbers language-none"><code class="language-none">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="安装自动部署插件"><a href="#安装自动部署插件" class="headerlink" title="安装自动部署插件"></a>安装自动部署插件</h3><figure class="highlight ada"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></tbody></table></figure>
 
 <h4 id="发布到Github中"><a href="#发布到Github中" class="headerlink" title="发布到Github中"></a>发布到Github中</h4><p>修改 _config.yml文件 配置</p>
-<pre class="line-numbers language-none"><code class="language-none"># Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  branch: master
-  repo: https://github.com/gallenzhang/gallenzhang.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight dts"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># Deployment</span><br><span class="hljs-meta">## Docs: https:<span class="hljs-comment">//hexo.io/docs/deployment.html</span></span><br><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  branch:</span> master<br><span class="hljs-symbol">  repo:</span> https:<span class="hljs-comment">//github.com/gallenzhang/gallenzhang.github.io.git</span><br></code></pre></td></tr></tbody></table></figure>
 
 <p>生成静态网页并部署</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo d -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight ebnf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d -g</span><br></code></pre></td></tr></tbody></table></figure>
 
 
 
 <h3 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h3><p>如果部署的时候出现 “ERROR Deployer not found: git” 错误提示，那是因为没有安装<code>hexo-deployer-git</code>插件。输入下面的命令，安装下插件重新试一下就好了。</p>
-<pre class="line-numbers language-none"><code class="language-none">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight ada"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></tbody></table></figure>
 
 <h3 id="7-通过Github网址来访问"><a href="#7-通过Github网址来访问" class="headerlink" title="7.通过Github网址来访问"></a>7.通过Github网址来访问</h3><p>浏览器中输入 xiekecheng.github.io 可以看到已部署成功</p>
 <p>![image-20210515170312113](/Users/xiekecheng/Library/Application Support/typora-user-images/image-20210515170312113.png)</p>
@@ -341,9 +319,9 @@ deploy:
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/06/04/shi-xian-ao-tu-zi/">
+                      <a href="/2021/06/07/day37-canvas/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">实现凹凸字</span>
+                        <span class="hidden-mobile">Canvas</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
