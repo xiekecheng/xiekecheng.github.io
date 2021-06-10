@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>TypeScript使用说明</title>
+    <link href="/2021/06/10/typescript-shi-yong-shuo-ming/"/>
+    <url>/2021/06/10/typescript-shi-yong-shuo-ming/</url>
+    
+    <content type="html"><![CDATA[<h2 id="typescript安装"><a href="#typescript安装" class="headerlink" title="typescript安装"></a>typescript安装</h2><p>全局安装typescript</p><figure class="highlight coffeescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-built_in">npm</span> i typescript -g<br></code></pre></td></tr></tbody></table></figure><p>查看typescript是否安装成功</p><figure class="highlight ada"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">tsc <span class="hljs-comment">--version</span><br></code></pre></td></tr></tbody></table></figure><p>初始化typescript,生成配置文件</p><figure class="highlight ada"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">tsc <span class="hljs-comment">--init</span><br></code></pre></td></tr></tbody></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>typescript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Canvas</title>
     <link href="/2021/06/07/day37-canvas/"/>
     <url>/2021/06/07/day37-canvas/</url>
