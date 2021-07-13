@@ -18,9 +18,25 @@
   <meta name="author" content="xiekecheng">
   <meta name="keywords" content="">
   
-  <title>分类 - Hexo</title>
+  <title>Vue中脚手架环境搭建 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -50,7 +66,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -144,14 +160,51 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/wallhaven-l3y62p_1280x720.png') no-repeat center center;
+         style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="分类">
+            <span class="h2" id="subtitle" title="Vue中脚手架环境搭建">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-13 08:06" pubdate>
+        2021年7月13日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      193 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -164,141 +217,138 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-
-
-
-
-
-<div class="category-list">
-  
-  
-  
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-c8428a45869e78fb361ed20b9c23b0a8" role="tab" data-toggle="collapse" href="#collapse-c8428a45869e78fb361ed20b9c23b0a8"
-        aria-expanded="false"
-      >
-        SpringBoot
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/SpringBoot/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>1</span>
-      </a>
-      <div class="category-collapse">
-        
-        
-          
-  <div id="collapse-c8428a45869e78fb361ed20b9c23b0a8" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-c8428a45869e78fb361ed20b9c23b0a8">
-    
-    
       
-      
-        <a href="/2021/05/15/build-hexo/" class="list-group-item list-group-item-action">
-          <span class="category-post">build-hexo</span>
-        </a>
-      
-    
-  </div>
 
-        
-      </div>
-    </div>
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-686155af75a60a0f6e9d80c1f7edd3e9" role="tab" data-toggle="collapse" href="#collapse-686155af75a60a0f6e9d80c1f7edd3e9"
-        aria-expanded="false"
-      >
-        JavaScript
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/JavaScript/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>1</span>
-      </a>
-      <div class="category-collapse">
-        
-        
-          
-  <div id="collapse-686155af75a60a0f6e9d80c1f7edd3e9" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-686155af75a60a0f6e9d80c1f7edd3e9">
-    
-    
-      
-      
-        <a href="/2021/06/16/shu-zu-fang-fa/" class="list-group-item list-group-item-action">
-          <span class="category-post"></span>
-        </a>
-      
-    
-  </div>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Vue中脚手架环境搭建</h1>
+            
+            <div class="markdown-body">
+              <h1 id="脚手架环境搭建"><a href="#脚手架环境搭建" class="headerlink" title="脚手架环境搭建"></a>脚手架环境搭建</h1><h3 id="安装-vue-cli"><a href="#安装-vue-cli" class="headerlink" title="安装@vue/cli"></a>安装@vue/cli</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 全局安装脚手架工具<br>npm install @vue/cli -g<br></code></pre></td></tr></tbody></table></figure>
 
-        
-      </div>
-    </div>
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-2d8ec58babcec05d3fe8f712968de749" role="tab" data-toggle="collapse" href="#collapse-2d8ec58babcec05d3fe8f712968de749"
-        aria-expanded="false"
-      >
-        Vue
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/Vue/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>1</span>
-      </a>
-      <div class="category-collapse">
-        
-        
-          
-  <div id="collapse-2d8ec58babcec05d3fe8f712968de749" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-2d8ec58babcec05d3fe8f712968de749">
-    
-    
-      
-      
-        <a href="/2021/07/13/vue-jiao-shou-jia-huan-jing-da-jian/" class="list-group-item list-group-item-action">
-          <span class="category-post">Vue中脚手架环境搭建</span>
-        </a>
-      
-    
-  </div>
 
-        
-      </div>
-    </div>
-  
-</div>
 
-              </div>
+<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 命令行创建项目 <br>vue create 项目名 <br>vue create vue-project<br></code></pre></td></tr></tbody></table></figure>
+
+<p>可以选择Vue2.0和3.0版本,这里我们选择 Vue 2.0 版本,按回车即可</p>
+<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081249368.png" srcset="/img/loading.gif" lazyload alt="image-20210713081249368"></p>
+<p>创建过程中会下载相关依赖插件,等待下载完成即可</p>
+<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081604161.png" srcset="/img/loading.gif" lazyload alt="image-20210713081604161"></p>
+<p>下载创建完成会有如下提示</p>
+<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081632693.png" srcset="/img/loading.gif" lazyload alt="image-20210713081632693"></p>
+<p>下载完成创建的目录结构:</p>
+<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081811328.png" srcset="/img/loading.gif" lazyload alt="image-20210713081811328"></p>
+<h2 id="在Vue中集成axios请求工具"><a href="#在Vue中集成axios请求工具" class="headerlink" title="在Vue中集成axios请求工具"></a>在Vue中集成axios请求工具</h2><p>安装 axios</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install axios -S<br></code></pre></td></tr></tbody></table></figure>
+
+<p>在main.js中引入axios</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 引入axios</span><br><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">'axios'</span><br><span class="hljs-comment">// 引入之后可以在组件中 使用this.$http  请求数据</span><br>Vue.prototype.$http = axios<br></code></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>之后可以在组件中使用axios进行请求,具体的使用方式可参考  </p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713082423650.png" srcset="/img/loading.gif" lazyload alt="image-20210713082423650"></p>
+
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Vue/">Vue</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/typescript/">typescript</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/06/16/shu-zu-fang-fa/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"Wu42zWM3sdTBxzr5u0FVsmni-gzGzoHsz","appKey":"MmgmQ1DeNl77eawFnYU6Qk9p","placeholder":"说点什么....","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -378,9 +428,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
 
 
 
