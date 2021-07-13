@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>Vue的vue-router集成与使用</title>
+      <link href="2021/07/13/vue-zhong-vue-router-ji-cheng-yu-shi-yong/"/>
+      <url>2021/07/13/vue-zhong-vue-router-ji-cheng-yu-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Vue的vue-router集成与使用"><a href="#Vue的vue-router集成与使用" class="headerlink" title="Vue的vue-router集成与使用"></a>Vue的vue-router集成与使用</h1><h3 id="安装vue-router"><a href="#安装vue-router" class="headerlink" title="安装vue-router"></a>安装vue-router</h3><figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install router -S<br></code></pre></td></tr></tbody></table></figure><h3 id="在Vue中导入vue-router"><a href="#在Vue中导入vue-router" class="headerlink" title="在Vue中导入vue-router"></a>在Vue中导入vue-router</h3><p>在脚手架环境中与main.js同级目录下新建router.js ,添加以下代码</p><figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">import Vue from <span class="hljs-string">'vue'</span><br>import VueRouter from <span class="hljs-string">'vue-router'</span><br><span class="hljs-regexp">//</span> 注册并使用第三方插件  这样一位,在当前Vue环境中多了以下的API<br><span class="hljs-regexp">//</span> <span class="hljs-number">1</span>. 多了两个内置组件: &lt;router-link&gt; , &lt;router-view&gt;<br><span class="hljs-regexp">//</span> <span class="hljs-number">2</span>. 在组件实例对象上多了两个内置API: <span class="hljs-variable">$route</span>  <span class="hljs-variable">$router</span><br>Vue.use(VueRouter)<br></code></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue-router </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue中脚手架环境搭建</title>
       <link href="2021/07/13/vue-jiao-shou-jia-huan-jing-da-jian/"/>
       <url>2021/07/13/vue-jiao-shou-jia-huan-jing-da-jian/</url>
       
-        <content type="html"><![CDATA[<h1 id="脚手架环境搭建"><a href="#脚手架环境搭建" class="headerlink" title="脚手架环境搭建"></a>脚手架环境搭建</h1><h3 id="安装-vue-cli"><a href="#安装-vue-cli" class="headerlink" title="安装@vue/cli"></a>安装@vue/cli</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 全局安装脚手架工具<br>npm install @vue/cli -g<br></code></pre></td></tr></tbody></table></figure><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 命令行创建项目 <br>vue create 项目名 <br>vue create vue-project<br></code></pre></td></tr></tbody></table></figure><p>可以选择Vue2.0和3.0版本,这里我们选择 Vue 2.0 版本,按回车即可</p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081249368.png" alt="image-20210713081249368"></p><p>创建过程中会下载相关依赖插件,等待下载完成即可</p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081604161.png" alt="image-20210713081604161"></p><p>下载创建完成会有如下提示</p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081632693.png" alt="image-20210713081632693"></p><p>下载完成创建的目录结构:</p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081811328.png" alt="image-20210713081811328"></p><h2 id="在Vue中集成axios请求工具"><a href="#在Vue中集成axios请求工具" class="headerlink" title="在Vue中集成axios请求工具"></a>在Vue中集成axios请求工具</h2><p>安装 axios</p><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install axios -S<br></code></pre></td></tr></tbody></table></figure><p>在main.js中引入axios</p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 引入axios</span><br><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">'axios'</span><br><span class="hljs-comment">// 引入之后可以在组件中 使用this.$http  请求数据</span><br>Vue.prototype.$http = axios<br></code></pre></td></tr></tbody></table></figure><blockquote><p>之后可以在组件中使用axios进行请求,具体的使用方式可参考  </p></blockquote><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713082423650.png" alt="image-20210713082423650"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="脚手架环境搭建"><a href="#脚手架环境搭建" class="headerlink" title="脚手架环境搭建"></a>脚手架环境搭建</h1><h3 id="安装-vue-cli"><a href="#安装-vue-cli" class="headerlink" title="安装@vue/cli"></a>安装@vue/cli</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 全局安装脚手架工具<br>npm install @vue/cli -g<br></code></pre></td></tr></tbody></table></figure><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 命令行创建项目 <br>vue create 项目名 <br>vue create vue-project<br></code></pre></td></tr></tbody></table></figure><p>可以选择Vue2.0和3.0版本,这里我们选择 Vue 2.0 版本,按回车即可</p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081249368.png" alt="image-20210713081249368"></p><p>创建过程中会下载相关依赖插件,等待下载完成即可</p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081604161.png" alt="image-20210713081604161"></p><p>下载创建完成会有如下提示</p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081632693.png" alt="image-20210713081632693"></p><p>下载完成创建的目录结构:</p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081811328.png" alt="image-20210713081811328"></p><h2 id="在Vue中集成axios请求工具"><a href="#在Vue中集成axios请求工具" class="headerlink" title="在Vue中集成axios请求工具"></a>在Vue中集成axios请求工具</h2><p>安装 axios</p><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install axios -S<br></code></pre></td></tr></tbody></table></figure><p>在main.js中引入axios</p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 引入axios</span><br><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">'axios'</span><br><span class="hljs-comment">// 引入之后可以在组件中 使用this.$http  请求数据</span><br>Vue.prototype.$http = axios<br></code></pre></td></tr></tbody></table></figure><p>之后可以在组件中使用axios进行请求,具体的使用方式可参考  <a href="https://github.com/axios/axios">axios使用文档</a></p><p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713082423650.png" alt="image-20210713082423650"></p>]]></content>
       
       
       <categories>
@@ -29,7 +54,7 @@
     
     
     <entry>
-      <title></title>
+      <title>js中数组方法总结</title>
       <link href="2021/06/16/shu-zu-fang-fa/"/>
       <url>2021/06/16/shu-zu-fang-fa/</url>
       
