@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>npm切换镜像源</title>
+    <link href="/2021/07/28/npm-qie-huan-jing-xiang-yuan/"/>
+    <url>/2021/07/28/npm-qie-huan-jing-xiang-yuan/</url>
+    
+    <content type="html"><![CDATA[<h1 id="npm切换镜像源常用命令"><a href="#npm切换镜像源常用命令" class="headerlink" title="npm切换镜像源常用命令"></a>npm切换镜像源常用命令</h1><p>平时需要使用npm install下载工具时,下载的镜像源在国外,如果想要获得更快的下载速度,不妨可以将npm镜像源切换至国内的淘宝镜像源,这样可以大大提高下载速度,下面列出切换镜像源的命令:</p><p>查看当前镜像源</p><figure class="highlight excel"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs excel">$ npm config get registry<br>=&gt; htt<span class="hljs-symbol">ps:</span>//registry.npmjs.org/<br></code></pre></td></tr></tbody></table></figure><p>切换npm镜像源到淘宝</p><figure class="highlight excel"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs excel">$ npm config set registry ht<span class="hljs-symbol">tp:</span>//registry.npm.taobao.org/<br>// 使用命令 npm config get registry查看即可确认是否已更换至淘宝镜像源<br>$ npm config get registry<br>=&gt; ht<span class="hljs-symbol">tp:</span>//registry.npm.taobao.org/<br></code></pre></td></tr></tbody></table></figure><p>切换回npm默认镜像源</p><figure class="highlight excel"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs excel">$ npm config set registry htt<span class="hljs-symbol">ps:</span>//registry.npmjs.org/<br>// 使用命令 npm config get registry查看即可确认是否已更换至npm默认镜像源<br>$ npm config get registry<br>=&gt; ht<span class="hljs-symbol">tp:</span>//registry.npm.taobao.org/<br></code></pre></td></tr></tbody></table></figure><p>可以单独设置每次使用npm命令的镜像源,只需要添加如下参数即可:</p><figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ npm --registry https:<span class="hljs-regexp">//</span>registry.npm.taobao.org install<br></code></pre></td></tr></tbody></table></figure><p>使用npx工具切换淘宝镜像源:</p><figure class="highlight elixir"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>npx nrm <span class="hljs-keyword">use</span> taobao<br></code></pre></td></tr></tbody></table></figure><p>切换回默认镜像源:</p><figure class="highlight elixir"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>npx nrm <span class="hljs-keyword">use</span> npm<br></code></pre></td></tr></tbody></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>npm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Vue的vue-router集成与使用</title>
     <link href="/2021/07/13/vue-zhong-vue-router-ji-cheng-yu-shi-yong/"/>
     <url>/2021/07/13/vue-zhong-vue-router-ji-cheng-yu-shi-yong/</url>
