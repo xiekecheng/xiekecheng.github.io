@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>文本省略的方法</title>
+      <link href="2021/09/04/wen-ben-sheng-lue/"/>
+      <url>2021/09/04/wen-ben-sheng-lue/</url>
+      
+        <content type="html"><![CDATA[<p>在列表页对商品介绍时，经常需要对商品进行简略描述，如果将多余一行的文字用省略号代替呢？以下是笔者试过的两种可行方案：</p><ul><li>方法一</li></ul><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><br>-webkit-line-clamp: <span class="hljs-number">1</span>;    //省略行数 可设置其他值<br>    <span class="hljs-attribute">display</span>: -webkit-box;<br>    <span class="hljs-attribute">word-break</span>: break-all;<br>    <span class="hljs-attribute">overflow</span>: hidden;<br>    -webkit-box-orient: vertical;<br></code></pre></td></tr></tbody></table></figure><ul><li>方法二</li></ul><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs css">&lt;style&gt;<br>  <span class="hljs-selector-class">.line</span>{<br>    <span class="hljs-attribute">display</span>: inline-block;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;<br>    <span class="hljs-attribute">overflow</span>: hidden;<br>    <span class="hljs-attribute">white-space</span>: nowrap;<br>    <span class="hljs-attribute">text-overflow</span>: ellipsis;<br>  }<br>//多行<br>  <span class="hljs-selector-class">.multi-line</span> {<br>    <span class="hljs-attribute">display</span>: -webkit-box;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;<br>    -webkit-box-orient: vertical;<br>    -webkit-line-clamp: <span class="hljs-number">2</span>;<br>    <span class="hljs-attribute">overflow</span>: hidden;<br>  }<br>&lt;/style&gt;<br>&lt;<span class="hljs-selector-tag">div</span> class="line"&gt;<br>  单行文本省略样例<br>&lt;/<span class="hljs-selector-tag">div</span>&gt;<br>&lt;<span class="hljs-selector-tag">div</span> class="multi-line"&gt;<br>  多行文本省略样例<br>&lt;/<span class="hljs-selector-tag">div</span>&gt;<br></code></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Webpack </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+            <tag> Webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于Webpack5.0搭建React环境</title>
       <link href="2021/08/05/webpack5.0-zhong-react-huan-jing-da-jian/"/>
       <url>2021/08/05/webpack5.0-zhong-react-huan-jing-da-jian/</url>
