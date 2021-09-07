@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>Git使用方法</title>
+    <link href="/2021/09/06/git-shi-yong/"/>
+    <url>/2021/09/06/git-shi-yong/</url>
+    
+    <content type="html"><![CDATA[<h4 id="Git卸载"><a href="#Git卸载" class="headerlink" title="Git卸载"></a>Git卸载</h4><p>查看git安装位置，<code>which -a git</code> </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Webpack</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vue</tag>
+      
+      <tag>Webpack</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Taro项目创建微信小程序</title>
+    <link href="/2021/09/05/taro-xiang-mu-chuang-jian/"/>
+    <url>/2021/09/05/taro-xiang-mu-chuang-jian/</url>
+    
+    <content type="html"><![CDATA[<h3 id="安装及使用"><a href="#安装及使用" class="headerlink" title="安装及使用"></a>安装及使用</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>Taro项目基于node，需要node环境&gt;12.0.0</p><h4 id="CLI工具安装"><a href="#CLI工具安装" class="headerlink" title="CLI工具安装"></a>CLI工具安装</h4><figure class="highlight elixir"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-comment"># 使用 npm 安装 CLI</span><br><span class="hljs-variable">$ </span>npm install -g <span class="hljs-variable">@tarojs</span>/cli<br><br><span class="hljs-comment"># OR 使用 yarn 安装 CLI</span><br><span class="hljs-variable">$ </span>yarn global add <span class="hljs-variable">@tarojs</span>/cli<br><br><span class="hljs-comment"># OR 安装了 cnpm，使用 cnpm 安装 CLI</span><br><span class="hljs-variable">$ </span>cnpm install -g <span class="hljs-variable">@tarojs</span>/cli<br></code></pre></td></tr></tbody></table></figure><h4 id="查看Taro版本信息"><a href="#查看Taro版本信息" class="headerlink" title="查看Taro版本信息"></a>查看Taro版本信息</h4><figure class="highlight coffeescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-built_in">npm</span> info @tarojs/cli<br></code></pre></td></tr></tbody></table></figure><h3 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h3><p>使用命令创建项目模板</p><figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">taro <span class="hljs-keyword">init</span> myApp<br></code></pre></td></tr></tbody></table></figure><p>在package.json中配置start命令</p><figure class="highlight 1c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">"start"</span>: <span class="hljs-string">"npm run dev:weapp"</span><br></code></pre></td></tr></tbody></table></figure><h4 id="安装Taro-UI"><a href="#安装Taro-UI" class="headerlink" title="安装Taro UI"></a>安装Taro UI</h4><figure class="highlight cmake"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> taro-ui<br>注意 taroUI的库版本要与taro的相同，比如taro3.<span class="hljs-number">0</span>要安装taroUI3.x的版本<br></code></pre></td></tr></tbody></table></figure><p>由于引用 <code>node_modules</code> 的模块，默认不会编译，所以需要额外给 H5 配置 <code>esnextModules</code>，在 taro 项目的 <code>config/index.js</code> 中新增如下配置项：</p><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h5</span>: {<br>  esnextModules: [<span class="hljs-string">'taro-ui'</span>]<br>}<br></code></pre></td></tr></tbody></table></figure><p>全局引用样式</p><figure class="highlight aspectj"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs aspectj"><span class="hljs-keyword">import</span> <span class="hljs-string">'taro-ui/dist/style/index.scss'</span> <span class="hljs-comment">// 引入组件样式 - 方式一</span><br><br></code></pre></td></tr></tbody></table></figure><h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><p>taro的路由在/src/app.config.js中配置</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Taro</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>React</tag>
+      
+      <tag>Taro</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>文本省略的方法</title>
     <link href="/2021/09/04/wen-ben-sheng-lue/"/>
     <url>/2021/09/04/wen-ben-sheng-lue/</url>

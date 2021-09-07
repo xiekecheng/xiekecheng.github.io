@@ -18,7 +18,7 @@
   <meta name="author" content="xiekecheng">
   <meta name="keywords" content="">
   
-  <title>Vue中脚手架环境搭建 - Hexo</title>
+  <title>Taro项目创建微信小程序 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Vue中脚手架环境搭建">
+            <span class="h2" id="subtitle" title="Taro项目创建微信小程序">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-13 08:06" pubdate>
-        2021年7月13日 早上
+      <time datetime="2021-09-05 01:26" pubdate>
+        2021年9月5日 凌晨
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      198 字
+      218 字
     </span>
   
 
@@ -227,33 +227,31 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Vue中脚手架环境搭建</h1>
+            <h1 style="display: none">Taro项目创建微信小程序</h1>
             
             <div class="markdown-body">
-              <h1 id="脚手架环境搭建"><a href="#脚手架环境搭建" class="headerlink" title="脚手架环境搭建"></a>脚手架环境搭建</h1><h3 id="安装-vue-cli"><a href="#安装-vue-cli" class="headerlink" title="安装@vue/cli"></a>安装@vue/cli</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 全局安装脚手架工具<br>npm install @vue/cli -g<br></code></pre></td></tr></tbody></table></figure>
+              <h3 id="安装及使用"><a href="#安装及使用" class="headerlink" title="安装及使用"></a>安装及使用</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>Taro项目基于node，需要node环境&gt;12.0.0</p>
+<h4 id="CLI工具安装"><a href="#CLI工具安装" class="headerlink" title="CLI工具安装"></a>CLI工具安装</h4><figure class="highlight elixir"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-comment"># 使用 npm 安装 CLI</span><br><span class="hljs-variable">$ </span>npm install -g <span class="hljs-variable">@tarojs</span>/cli<br><br><span class="hljs-comment"># OR 使用 yarn 安装 CLI</span><br><span class="hljs-variable">$ </span>yarn global add <span class="hljs-variable">@tarojs</span>/cli<br><br><span class="hljs-comment"># OR 安装了 cnpm，使用 cnpm 安装 CLI</span><br><span class="hljs-variable">$ </span>cnpm install -g <span class="hljs-variable">@tarojs</span>/cli<br></code></pre></td></tr></tbody></table></figure>
+
+<h4 id="查看Taro版本信息"><a href="#查看Taro版本信息" class="headerlink" title="查看Taro版本信息"></a>查看Taro版本信息</h4><figure class="highlight coffeescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-built_in">npm</span> info @tarojs/cli<br></code></pre></td></tr></tbody></table></figure>
+
+<h3 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h3><p>使用命令创建项目模板</p>
+<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">taro <span class="hljs-keyword">init</span> myApp<br></code></pre></td></tr></tbody></table></figure>
+
+<p>在package.json中配置start命令</p>
+<figure class="highlight 1c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">"start"</span>: <span class="hljs-string">"npm run dev:weapp"</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h4 id="安装Taro-UI"><a href="#安装Taro-UI" class="headerlink" title="安装Taro UI"></a>安装Taro UI</h4><figure class="highlight cmake"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> taro-ui<br>注意 taroUI的库版本要与taro的相同，比如taro3.<span class="hljs-number">0</span>要安装taroUI3.x的版本<br></code></pre></td></tr></tbody></table></figure>
+
+<p>由于引用 <code>node_modules</code> 的模块，默认不会编译，所以需要额外给 H5 配置 <code>esnextModules</code>，在 taro 项目的 <code>config/index.js</code> 中新增如下配置项：</p>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h5</span>: {<br>  esnextModules: [<span class="hljs-string">'taro-ui'</span>]<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>全局引用样式</p>
+<figure class="highlight aspectj"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs aspectj"><span class="hljs-keyword">import</span> <span class="hljs-string">'taro-ui/dist/style/index.scss'</span> <span class="hljs-comment">// 引入组件样式 - 方式一</span><br><br></code></pre></td></tr></tbody></table></figure>
 
 
 
-<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 命令行创建项目 <br>vue create 项目名 <br>vue create vue-project<br></code></pre></td></tr></tbody></table></figure>
-
-<p>可以选择Vue2.0和3.0版本,这里我们选择 Vue 2.0 版本,按回车即可</p>
-<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081249368.png" srcset="/img/loading.gif" lazyload alt="image-20210713081249368"></p>
-<p>创建过程中会下载相关依赖插件,等待下载完成即可</p>
-<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081604161.png" srcset="/img/loading.gif" lazyload alt="image-20210713081604161"></p>
-<p>下载创建完成会有如下提示</p>
-<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081632693.png" srcset="/img/loading.gif" lazyload alt="image-20210713081632693"></p>
-<p>下载完成创建的目录结构:</p>
-<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713081811328.png" srcset="/img/loading.gif" lazyload alt="image-20210713081811328"></p>
-<h2 id="在Vue中集成axios请求工具"><a href="#在Vue中集成axios请求工具" class="headerlink" title="在Vue中集成axios请求工具"></a>在Vue中集成axios请求工具</h2><p>安装 axios</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install axios -S<br></code></pre></td></tr></tbody></table></figure>
-
-<p>在main.js中引入axios</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 引入axios</span><br><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">'axios'</span><br><span class="hljs-comment">// 引入之后可以在组件中 使用this.$http  请求数据</span><br>Vue.prototype.$http = axios<br></code></pre></td></tr></tbody></table></figure>
-
-<p>之后可以在组件中使用axios进行请求,具体的使用方式可参考  <a target="_blank" rel="noopener" href="https://github.com/axios/axios">axios使用文档</a></p>
-<p><img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/image-20210713082423650.png" srcset="/img/loading.gif" lazyload alt="image-20210713082423650"></p>
-<p><img src="/img/image-20210713082423650.png" srcset="/img/loading.gif" lazyload alt="image-20210713082423650"></p>
-<p><img src="/Users/xiekecheng/Documents/HexoBlog/HexoBlog/public/img/image-20210713082423650.png" srcset="/img/loading.gif" lazyload alt="image-20210713082423650"></p>
+<h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><p>taro的路由在/src/app.config.js中配置</p>
 
             </div>
             <hr>
@@ -263,7 +261,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Vue/">Vue</a>
+                      <a class="hover-with-bg" href="/categories/Taro/">Taro</a>
                     
                   </div>
                 
@@ -271,7 +269,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/typescript/">typescript</a>
+                      <a class="hover-with-bg" href="/tags/React/">React</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Taro/">Taro</a>
                     
                   </div>
                 
@@ -288,9 +288,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/07/13/vue-zhong-vue-router-ji-cheng-yu-shi-yong/">
+                      <a href="/2021/09/06/git-shi-yong/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Vue的Vue-Router集成与使用</span>
+                        <span class="hidden-mobile">Git使用方法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -298,8 +298,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/06/16/shu-zu-fang-fa/">
-                        <span class="hidden-mobile">JavaScript数组方法总结</span>
+                      <a href="/2021/09/04/wen-ben-sheng-lue/">
+                        <span class="hidden-mobile">文本省略的方法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
