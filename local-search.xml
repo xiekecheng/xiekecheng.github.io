@@ -4,20 +4,34 @@
   
   
   <entry>
-    <title></title>
+    <title>前端书籍推荐</title>
     <link href="/2021/09/10/javascript-shu-ji-tui-jian/"/>
     <url>/2021/09/10/javascript-shu-ji-tui-jian/</url>
     
     <content type="html"><![CDATA[<p>你不知道的JavaScript</p><p>图解HTTP</p><p>JavaScript高级编程</p>]]></content>
     
     
+    <categories>
+      
+      <category>Webpack</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vue</tag>
+      
+      <tag>Webpack</tag>
+      
+    </tags>
     
   </entry>
   
   
   
   <entry>
-    <title>JavaScript数组方法总结</title>
+    <title>使用n管理mac的node版本</title>
     <link href="/2021/09/10/shi-yong-n-guan-li-mac-de-node-ban-ben/"/>
     <url>/2021/09/10/shi-yong-n-guan-li-mac-de-node-ban-ben/</url>
     
@@ -26,7 +40,7 @@
     
     <categories>
       
-      <category>JavaScript</category>
+      <category>Node</category>
       
     </categories>
     
