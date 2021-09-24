@@ -311,7 +311,7 @@
   
   
   <entry>
-    <title>build-hexo</title>
+    <title>hexo博客搭建</title>
     <link href="/2021/05/15/build-hexo/"/>
     <url>/2021/05/15/build-hexo/</url>
     
@@ -343,6 +343,31 @@
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
     
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LearnDocker</title>
+    <link href="/2019/07/14/learndocer/"/>
+    <url>/2019/07/14/learndocer/</url>
+    
+    <content type="html"><![CDATA[<h2 id="learn-docker"><a href="#learn-docker" class="headerlink" title="learn docker"></a>learn docker</h2><h2 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h2><p><code>docker version</code>  查看docker客户端和服务的版本</p><p><code>docker info</code> 查看docker的基本信息,例如有多少容器,多少镜像,docker个目录等</p><p><code>docker —help</code> 查看docker的帮助信息</p><h2 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h2><ol><li><p><code>docker images</code> 查看本地主机上的所有镜像</p></li><li><p><code>docker rmi</code> 删除本地的镜像, 可以加上<code>-f</code> 参数进行强制删除</p><p><code>$ docker rmi -f tomcat</code></p></li><li><p><code>docker search</code> 根据镜像名称搜索远程仓库中的镜像</p></li><li><p><code>docker pull</code> 搜索到某个镜像之后可以从远程拉取镜像,类似github的pull功能</p></li></ol><h2 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h2><ol><li><code>docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</code>  可以基于某个镜像运行一个容器</li></ol><blockquote><p><code>-d</code>:启动容器,并且后台运行<br><code>-i</code>:以交互模式运行容器<br><code>-t</code>:为容器重新分配一个伪输入终端<br><code>-P</code>:随机端口映射<br><code>-p</code>:指定端口映射<br><code>-v</code>:建立宿主机与容器目录的同步<br><code>--name="myTomcat"</code>为容器指定一个名称(如果不指定,则有个随机的名字)</p></blockquote><ol><li>进入容器后可以通过<code>exit</code>命令退出容器</li><li><code>docker ps</code> 通过该命令可查看正在运行的容器信息</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web</tag>
+      
+    </tags>
     
   </entry>
   
