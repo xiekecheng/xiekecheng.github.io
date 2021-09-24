@@ -182,7 +182,7 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/05/15/build-hexo/" target="_self">
+        <a href="/2019/04/16/build-hexo/" target="_self">
           <img src="/img/Hexo-Cover.png" srcset="/img/loading.gif" lazyload alt="hexo博客搭建">
         </a>
       </div>
@@ -190,13 +190,13 @@
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/15/build-hexo/" target="_self">
+        <a href="/2019/04/16/build-hexo/" target="_self">
           hexo博客搭建
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/15/build-hexo/" target="_self">
+        <a href="/2019/04/16/build-hexo/" target="_self">
           
           
             
@@ -213,8 +213,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-05-15 16:44" pubdate>
-              2021-05-15
+            <time datetime="2019-04-16 09:11" pubdate>
+              2019-04-16
             </time>
           </div>
         
@@ -242,27 +242,29 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/05/15/hello-world/" target="_self">
-          <img src="/img/v2-41e1b825c51055f39c22b95777bc620b_1440w.jpeg" srcset="/img/loading.gif" lazyload alt="Hello World">
+        <a href="/2019/03/16/vue-zhong-vue-router-ji-cheng-yu-shi-yong/" target="_self">
+          <img src="/img/vue-router.jpeg" srcset="/img/loading.gif" lazyload alt="Vue的Vue-Router集成与使用">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/15/hello-world/" target="_self">
-          Hello World
+        <a href="/2019/03/16/vue-zhong-vue-router-ji-cheng-yu-shi-yong/" target="_self">
+          Vue的Vue-Router集成与使用
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/15/hello-world/" target="_self">
+        <a href="/2019/03/16/vue-zhong-vue-router-ji-cheng-yu-shi-yong/" target="_self">
           
           
             
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+          Vue-Router集成与使用安装Vue-Router1npm install router -S
+
+在Vue中导入Vue-Router在脚手架环境中与main.js同级目录下新建router.js ,添加以下代码
+123456import Vue from 'vue'import VueRouter from 'vue-router'// 注册并使用第三方插件  这样一位,在当前Vue环境中多了
         </a>
       </p>
 
@@ -270,12 +272,26 @@ Quick
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-05-15 15:42" pubdate>
-              2021-05-15
+            <time datetime="2019-03-16 06:11" pubdate>
+              2019-03-16
             </time>
           </div>
         
         
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Vue/">Vue</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Vue-Router/">Vue-Router</a>
+            
+          </div>
         
       </div>
     </article>
@@ -285,30 +301,38 @@ Quick
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/07/14/shi-yong-n-guan-li-mac-de-node-ban-ben/" target="_self">
-          <img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/20210713124713.png" srcset="/img/loading.gif" lazyload alt="使用n管理mac的node版本">
+        <a href="/2018/06/16/vue-jiao-shou-jia-huan-jing-da-jian/" target="_self">
+          <img src="https://raw.githubusercontent.com/xiekecheng/ImageStorage/main/20210713090543.png" srcset="/img/loading.gif" lazyload alt="Vue中脚手架环境搭建">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/07/14/shi-yong-n-guan-li-mac-de-node-ban-ben/" target="_self">
-          使用n管理mac的node版本
+        <a href="/2018/06/16/vue-jiao-shou-jia-huan-jing-da-jian/" target="_self">
+          Vue中脚手架环境搭建
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2019/07/14/shi-yong-n-guan-li-mac-de-node-ban-ben/" target="_self">
+        <a href="/2018/06/16/vue-jiao-shou-jia-huan-jing-da-jian/" target="_self">
           
           
             
           
-          在mac电脑开发环境中，node在不同版本可能会造成一些开发问题，此时，需要一个能够切换node版本的工具，在mac中，常用管理node的工具有nvm和n，下面介绍使用n来管理mac电脑中的nodejs版本
-1、安装使用npm命令安装 n，如不清楚npm的使用，查看nodeJS官网和npm快速入门
-1npm install -g n
+          脚手架环境搭建安装@vue/cli12// 全局安装脚手架工具npm install @vue/cli -g
 
-2、安装指定node版本123n 12.1.0  // 下载安
+
+
+创建项目123// 命令行创建项目 vue create 项目名 vue create vue-project
+
+可以选择Vue2.0和3.0版本,这里我们选择 Vue 2.0 版本,按回车即可
+
+创建过程中会下载相关依赖插件,等待下载完成即可
+
+下载创建完成会有如下提示
+
+下载完成
         </a>
       </p>
 
@@ -316,8 +340,8 @@ Quick
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2019-07-14 19:24" pubdate>
-              2019-07-14
+            <time datetime="2018-06-16 13:11" pubdate>
+              2018-06-16
             </time>
           </div>
         
@@ -325,57 +349,7 @@ Quick
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Node/">Node</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/07/14/docker-chang-yong-ming-ling/" target="_self">
-          Docker常用命令
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/07/14/docker-chang-yong-ming-ling/" target="_self">
-          
-          
-            
-          
-          learn docker帮助命令docker version  查看docker客户端和服务的版本
-docker info 查看docker的基本信息,例如有多少容器,多少镜像,docker个目录等
-docker —help 查看docker的帮助信息
-镜像命令
-docker images 查看本地主机上的所有镜像
-
-docker rmi 删除本地的镜像, 可以加上-f 参数进行强制删除
-$ do
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-07-14 19:24" pubdate>
-              2019-07-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/web/">web</a>
+              <a href="/categories/Vue/">Vue</a>
             
           </div>
         
@@ -383,7 +357,7 @@ $ do
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/web/">web</a>
+              <a href="/tags/typescript/">typescript</a>
             
           </div>
         
