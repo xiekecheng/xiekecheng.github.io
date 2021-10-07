@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
+      21
        分钟
     </span>
   
@@ -287,9 +287,9 @@
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">'a'</span>,<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>];<br><span class="hljs-keyword">var</span> brr = [<span class="hljs-string">'d'</span>,<span class="hljs-string">'e'</span>,<span class="hljs-string">'f'</span>];<br><span class="hljs-keyword">var</span> crr = [<span class="hljs-string">'h'</span>,<span class="hljs-string">'i'</span>,<span class="hljs-string">'j'</span>];<br><br><span class="hljs-comment">// var drr = arr.concat(brr,crr)</span><br><span class="hljs-keyword">var</span> drr = arr.concat(brr,<span class="hljs-string">'1'</span>,<span class="hljs-string">'2'</span>,<span class="hljs-string">'3'</span>)<br><span class="hljs-built_in">console</span>.log(drr);<br></code></pre></td></tr></tbody></table></figure>
 
 <p><font color="red"><strong>注意：返回值一定是一个一维数组</strong></font></p>
-<h2 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h2><p>截取数组，从一个数组中截取一段</p>
+<h2 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h2><p>截取数组，从一个数组中截取一段,不包含结束下标的元素</p>
 <p>语法：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">数组.slice(开始下标[,结束下标])<br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">数组.slice(开始下标[,结束下标]) <br></code></pre></td></tr></tbody></table></figure>
 
 <p>例：</p>
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">'a'</span>,<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>,<span class="hljs-string">'d'</span>,<span class="hljs-string">'e'</span>,<span class="hljs-string">'f'</span>];<br><span class="hljs-keyword">var</span> brr = arr.slice(<span class="hljs-number">2</span>) <br><span class="hljs-built_in">console</span>.log(brr); <span class="hljs-comment">// ["c", "d", "e", "f"]</span><br><br><span class="hljs-keyword">var</span> crr = arr.slice(<span class="hljs-number">2</span>,<span class="hljs-number">4</span>)<br><span class="hljs-built_in">console</span>.log(crr); <span class="hljs-comment">// ["c", "d"]</span><br></code></pre></td></tr></tbody></table></figure>
@@ -337,6 +337,9 @@
 
 <p>例：</p>
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> sum = arr.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">prev,next</span>)</span>{<br>    <span class="hljs-keyword">return</span> prev + next;<br>})<br><span class="hljs-built_in">console</span>.log(sum);<br></code></pre></td></tr></tbody></table></figure>
+
+<p>计算数组中元素出现的次数</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-string">'jack'</span>,<span class="hljs-string">'tom'</span>,<span class="hljs-string">'rose'</span>,<span class="hljs-string">'tom'</span>]<br><br><span class="hljs-comment">// 计算数组中元素出现的次数</span><br><span class="hljs-comment">// reduce 返回累加器</span><br><span class="hljs-keyword">const</span> allNames = arr.reduce(<span class="hljs-function">(<span class="hljs-params">acc,current</span>)=&gt;</span>{<br>	<span class="hljs-keyword">if</span>(current <span class="hljs-keyword">in</span> acc){<br>		acc[current]++<br>	}<span class="hljs-keyword">else</span>{<br>		acc[current] = <span class="hljs-number">1</span><br>	}<br>	<span class="hljs-keyword">return</span> acc<br>},{})<br><br><span class="hljs-built_in">console</span>.log(allNames);<br><span class="hljs-comment">// { jack: 1, tom: 2, rose: 1 }</span><br></code></pre></td></tr></tbody></table></figure>
 
 
 

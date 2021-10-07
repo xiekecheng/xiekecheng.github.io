@@ -18,7 +18,7 @@
   <meta name="author" content="xiekecheng">
   <meta name="keywords" content="">
   
-  <title>继承和原型、原型链 - Kcc的个人博客</title>
+  <title>你不知道的JavaScript读书笔记 - Kcc的个人博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="继承和原型、原型链">
+            <span class="h2" id="subtitle" title="你不知道的JavaScript读书笔记">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-30 10:11" pubdate>
-        2021年9月30日 上午
+      <time datetime="2021-09-30 17:43" pubdate>
+        2021年9月30日 下午
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      137 字
+      573 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      6
        分钟
     </span>
   
@@ -227,14 +227,29 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">继承和原型、原型链</h1>
+            <h1 style="display: none">你不知道的JavaScript读书笔记</h1>
             
             <div class="markdown-body">
-              <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="使用ES6中的class实现继承，可以继承父类属性和方法"><a href="#使用ES6中的class实现继承，可以继承父类属性和方法" class="headerlink" title="使用ES6中的class实现继承，可以继承父类属性和方法"></a>使用ES6中的class实现继承，可以继承父类属性和方法</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{<br>	<span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">name, age</span>)</span> {<br>		<span class="hljs-built_in">this</span>.name = name<br>		<span class="hljs-built_in">this</span>.age = age<br>	}<br>	<span class="hljs-function"><span class="hljs-title">introduce</span>(<span class="hljs-params">name, age, desc</span>)</span> {<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`我是<span class="hljs-subst">${<span class="hljs-built_in">this</span>.name}</span>,我今年<span class="hljs-subst">${<span class="hljs-built_in">this</span>.age}</span>岁了，<span class="hljs-subst">${<span class="hljs-built_in">this</span>.desc}</span>`</span>)<br>	}<br>}<br><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{<br>	<span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">name, age, desc</span>)</span> {<br>		<span class="hljs-comment">// 需要使用super调用父类构造方法才可以在构造函数中使用this</span><br>		<span class="hljs-built_in">super</span>(name, age)<br>		<span class="hljs-built_in">this</span>.desc = desc<br>	}<br><br><br>}<br><br><span class="hljs-keyword">const</span> student = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">'小明'</span>, <span class="hljs-number">18</span>, <span class="hljs-string">'小明是个好学生'</span>)<br>student.introduce()<br></code></pre></td></tr></tbody></table></figure>
+              <h1 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h1><h2 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h2><h3 id="一、作用域是什么"><a href="#一、作用域是什么" class="headerlink" title="一、作用域是什么"></a>一、作用域是什么</h3><h3 id="二、词法作用域"><a href="#二、词法作用域" class="headerlink" title="二、词法作用域"></a>二、词法作用域</h3><h3 id="三、函数作用域和块级作用域"><a href="#三、函数作用域和块级作用域" class="headerlink" title="三、函数作用域和块级作用域"></a>三、函数作用域和块级作用域</h3><h3 id="四、提升"><a href="#四、提升" class="headerlink" title="四、提升"></a>四、提升</h3><h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><p>var 声明的变量会产生变量提升</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs js">a = <span class="hljs-number">2</span><br><span class="hljs-keyword">var</span> a<br><span class="hljs-built_in">console</span>.log(a)<br><br>以上代码会解释成<br><span class="hljs-keyword">var</span> a<br>a = <span class="hljs-number">2</span><br><span class="hljs-built_in">console</span>.log(a)<br><span class="hljs-comment">// output:  2</span><br><br><span class="hljs-built_in">console</span>.log(a)<br><span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span><br><br>以上代码会解释成<br><span class="hljs-keyword">var</span> a<br><span class="hljs-built_in">console</span>.log(a)<br>a= <span class="hljs-number">2</span><br><span class="hljs-comment">// output: undefined</span><br><br><br></code></pre></td></tr></tbody></table></figure>
 
-<h3 id="原型，原型链"><a href="#原型，原型链" class="headerlink" title="原型，原型链"></a>原型，原型链</h3><p>对象中有 <code>__proto__</code> ,当前对象没有的属性或方法，会从原型链中去找</p>
-<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></tbody></table></figure>
+<h4 id="函数提升"><a href="#函数提升" class="headerlink" title="函数提升"></a>函数提升</h4><p>函数提升优先于变量提升</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> foo<br>foo()<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>)</span>{<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-number">111</span>)<br>}<br><br>foo = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-number">222</span>)<br>}<br><span class="hljs-comment">// 这段代码会输出 111  因为 函数提升优先于变量提升</span><br></code></pre></td></tr></tbody></table></figure>
 
+<h3 id="五、作用域闭包"><a href="#五、作用域闭包" class="headerlink" title="五、作用域闭包"></a>五、作用域闭包</h3><h4 id="5-1启示"><a href="#5-1启示" class="headerlink" title="5.1启示"></a>5.1启示</h4><p>闭包是基于词法作用域书写代码时所产生的自然结果，你甚至不需要为了利用它们而有意 识地创建闭包。闭包的创建和使用在你的代码中随处可见。你缺少的是根据你自己的意愿 来识别、拥抱和影响闭包的思维环境。</p>
+<h4 id="5-2实质问题"><a href="#5-2实质问题" class="headerlink" title="5.2实质问题"></a>5.2实质问题</h4><h4 id="5-3闭包的定义"><a href="#5-3闭包的定义" class="headerlink" title="5.3闭包的定义"></a>5.3闭包的定义</h4><p>小红书对于闭包的定义：闭包指的是哪些引用了另一个函数作用域中变量的函数</p>
+<p>JS对闭包定义：</p>
+<h4 id="5-4闭包的作用："><a href="#5-4闭包的作用：" class="headerlink" title="5.4闭包的作用："></a>5.4闭包的作用：</h4><p>闭包可以阻止另一个函数作用域中的变量被回收</p>
+<p>JS垃圾处理机制：js垃圾回收机制在时间周期内会回收不再被使用的变量</p>
+<h4 id="5-5-循环和闭包"><a href="#5-5-循环和闭包" class="headerlink" title="5.5 循环和闭包"></a>5.5 循环和闭包</h4><p>for循环可以很好的解释闭包</p>
+<h4 id="5-6-闭包的使用场景"><a href="#5-6-闭包的使用场景" class="headerlink" title="5.6 闭包的使用场景"></a>5.6 闭包的使用场景</h4><p>在我们的代码中，闭包无处不在，只有使用到回调函数，实际上就是在使用闭包：像定时器、事件监听器、Ajax请求、跨窗口通信、Web Workers或者任何其他的异步（或者同步）任务中，只要使用了回调函数，实际上就是在使用闭包。</p>
+<h4 id="5-7-模块"><a href="#5-7-模块" class="headerlink" title="5.7 ==模块=="></a>5.7 ==模块==</h4><p>模块模式具备的两个必要条件</p>
+<ol>
+<li><p>必须有外部的封闭函数，该函数必须至少被调用一次(每次调用都会创建一个新的模块 实例)。</p>
+</li>
+<li><p>封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并 且可以访问或者修改私有的状态。</p>
+</li>
+</ol>
 
             </div>
             <hr>
@@ -244,7 +259,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Vue/">Vue</a>
+                      <a class="hover-with-bg" href="/categories/JavaScript/">JavaScript</a>
                     
                   </div>
                 
@@ -262,9 +277,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/30/ni-bu-zhi-dao-de-javascript-li-jie-shang-di-yi-bu-fen/">
+                      <a href="/2021/10/02/js-zhong-call-bind-apply-shi-yong-fang-fa/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">你不知道的JavaScript读书笔记</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -272,8 +287,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/09/29/vue-yi-nan-dian-zong-jie/">
-                        <span class="hidden-mobile">Vue疑难点总结</span>
+                      <a href="/2021/09/30/js-zhong-ji-cheng-he-yuan-xing-yuan-xing-lian-guan-xi/">
+                        <span class="hidden-mobile">继承和原型、原型链</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
