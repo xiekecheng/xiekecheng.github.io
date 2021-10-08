@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>你不知道的JavaScript读书笔记</title>
-      <link href="2021/10/03/ni-bu-zhi-dao-de-javascript-shang-di-er-bu-fen/"/>
-      <url>2021/10/03/ni-bu-zhi-dao-de-javascript-shang-di-er-bu-fen/</url>
+      <title>JavaScript数组去重方法</title>
+      <link href="2021/10/08/js-shu-zu-qu-chong-fang-fa-zong-jie/"/>
+      <url>2021/10/08/js-shu-zu-qu-chong-fang-fa-zong-jie/</url>
       
-        <content type="html"><![CDATA[<h1 id="第二部分-this和对象原型"><a href="#第二部分-this和对象原型" class="headerlink" title="第二部分 this和对象原型"></a>第二部分 this和对象原型</h1><h2 id="关于this"><a href="#关于this" class="headerlink" title="关于this"></a>关于this</h2><h3 id="1-1-为什么要用this"><a href="#1-1-为什么要用this" class="headerlink" title="1.1 为什么要用this"></a>1.1 为什么要用this</h3><p>this可以指代一个对象</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="4种数组去重方法"><a href="#4种数组去重方法" class="headerlink" title="4种数组去重方法"></a>4种数组去重方法</h1><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> originArr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">10</span>,<span class="hljs-number">13</span>,<span class="hljs-number">25</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]<br><br><span class="hljs-comment">// 使用filter去重</span><br><span class="hljs-keyword">const</span> NoRepeat = originArr.filter(<span class="hljs-function">(<span class="hljs-params">ele,index,arr</span>)=&gt;</span>{<br><span class="hljs-keyword">return</span> arr.indexOf(ele) == index<br>})<br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'NoRepeat'</span>,NoRepeat);<br><br><span class="hljs-comment">// 使用set去重</span><br><span class="hljs-keyword">const</span> NoRepeat2 = <span class="hljs-built_in">Array</span>.from(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(originArr))<br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'NoRepeat2'</span>,NoRepeat2);<br><br><span class="hljs-comment">// 使用indexOf去重</span><br><span class="hljs-keyword">const</span> NoRepeat3 = []<br>originArr.forEach(<span class="hljs-function">(<span class="hljs-params">ele,index,ar</span>)=&gt;</span>{<br><span class="hljs-comment">// console.log(ele);</span><br><span class="hljs-keyword">if</span>(NoRepeat3.indexOf(ele)===-<span class="hljs-number">1</span>){<br>NoRepeat3.push(ele)<br>}<br>}) <br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'NoRepeat3'</span>,NoRepeat3);<br><br><br><span class="hljs-keyword">const</span> NoRepeat4 = []<br><span class="hljs-comment">// 使用includes去重</span><br>originArr.forEach(<span class="hljs-function">(<span class="hljs-params">ele,index</span>)=&gt;</span>{<br><span class="hljs-keyword">if</span>(!NoRepeat4.includes(ele)){<br>NoRepeat4.push(ele)<br>}<br>})<br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'NoRepeat4'</span>,NoRepeat4);<br><br><br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'使用newSet'</span>,[...new <span class="hljs-built_in">Set</span>(originArr)]);<br></code></pre></td></tr></tbody></table></figure>]]></content>
       
       
       <categories>
@@ -23,12 +23,18 @@
     
     
     <entry>
-      <title></title>
-      <link href="2021/10/03/js-shu-zu-qu-chong-fang-fa-zong-jie/"/>
-      <url>2021/10/03/js-shu-zu-qu-chong-fang-fa-zong-jie/</url>
+      <title>JS中call、bind、apply使用方法</title>
+      <link href="2021/10/05/js-zhong-call-bind-apply-shi-yong-fang-fa/"/>
+      <url>2021/10/05/js-zhong-call-bind-apply-shi-yong-fang-fa/</url>
       
-        <content type="html"><![CDATA[<p>4种数组去重方法</p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> originArr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">10</span>,<span class="hljs-number">13</span>,<span class="hljs-number">25</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]<br><br><span class="hljs-comment">// 使用filter去重</span><br><span class="hljs-keyword">const</span> NoRepeat = originArr.filter(<span class="hljs-function">(<span class="hljs-params">ele,index,arr</span>)=&gt;</span>{<br><span class="hljs-keyword">return</span> arr.indexOf(ele) == index<br>})<br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'NoRepeat'</span>,NoRepeat);<br><br><span class="hljs-comment">// 使用set去重</span><br><span class="hljs-keyword">const</span> NoRepeat2 = <span class="hljs-built_in">Array</span>.from(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(originArr))<br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'NoRepeat2'</span>,NoRepeat2);<br><br><span class="hljs-comment">// 使用indexOf去重</span><br><span class="hljs-keyword">const</span> NoRepeat3 = []<br>originArr.forEach(<span class="hljs-function">(<span class="hljs-params">ele,index,ar</span>)=&gt;</span>{<br><span class="hljs-comment">// console.log(ele);</span><br><span class="hljs-keyword">if</span>(NoRepeat3.indexOf(ele)===-<span class="hljs-number">1</span>){<br>NoRepeat3.push(ele)<br>}<br>}) <br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'NoRepeat3'</span>,NoRepeat3);<br><br><br><span class="hljs-keyword">const</span> NoRepeat4 = []<br><span class="hljs-comment">// 使用includes去重</span><br>originArr.forEach(<span class="hljs-function">(<span class="hljs-params">ele,index</span>)=&gt;</span>{<br><span class="hljs-keyword">if</span>(!NoRepeat4.includes(ele)){<br>NoRepeat4.push(ele)<br>}<br>})<br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'NoRepeat4'</span>,NoRepeat4);<br><br><br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'使用newSet'</span>,[...new <span class="hljs-built_in">Set</span>(originArr)]);<br></code></pre></td></tr></tbody></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="JS中call、bind、apply使用方法"><a href="#JS中call、bind、apply使用方法" class="headerlink" title="JS中call、bind、apply使用方法"></a>JS中call、bind、apply使用方法</h2><p><strong>call是函数的方法</strong>，使用fn.call可以调用fn函数，和fn() 是一样的，fn.call(‘改变this指向的对象’,给fn函数传参数)</p><p>apply(‘改变this的指向’,使用==数组==给函数传参)</p><p>bind(‘改变this的指向’,给函数传递参数)   不会调用该函数</p><p>call(‘改变this的指向’,给函数传参) ，最后调用该函数</p><h2 id="Funciton中prototype中的属性和方法"><a href="#Funciton中prototype中的属性和方法" class="headerlink" title="Funciton中prototype中的属性和方法"></a>Funciton中prototype中的属性和方法</h2><h3 id="Instance-properties"><a href="#Instance-properties" class="headerlink" title="Instance properties"></a>Instance properties</h3><p>Fcuntion.prototype.arguments</p><p>Fcuntion.prototype.caller</p><p>Fcuntion.prototype.displayName</p><p>Fcuntion.prototype.length</p><p>Fcuntion.prototype.name</p><h3 id="Instance-mehods"><a href="#Instance-mehods" class="headerlink" title="Instance mehods"></a>Instance mehods</h3><p>Fcuntion.prototype.apply</p><p>Fcuntion.prototype.bind</p><p>Fcuntion.prototype.call</p><p>Fcuntion.prototype.toString</p>]]></content>
       
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
       
       
     </entry>
@@ -36,12 +42,18 @@
     
     
     <entry>
-      <title></title>
-      <link href="2021/10/02/js-zhong-call-bind-apply-shi-yong-fang-fa/"/>
-      <url>2021/10/02/js-zhong-call-bind-apply-shi-yong-fang-fa/</url>
+      <title>你不知道的JavaScript读书笔记</title>
+      <link href="2021/10/03/ni-bu-zhi-dao-de-javascript-shang-di-er-bu-fen/"/>
+      <url>2021/10/03/ni-bu-zhi-dao-de-javascript-shang-di-er-bu-fen/</url>
       
-        <content type="html"><![CDATA[<h2 id="JS中call、bind、apply使用方法"><a href="#JS中call、bind、apply使用方法" class="headerlink" title="JS中call、bind、apply使用方法"></a>JS中call、bind、apply使用方法</h2><p><strong>call是函数的方法</strong>，使用fn.call可以调用fn函数，和fn() 是一样的，fn.call(‘改变this指向的对象’,给fn函数传参数)</p><p>apply(‘改变this的指向’,使用==数组==给函数传参)</p><p>bind(‘改变this的指向’,给函数传递参数)   不会调用该函数</p><p>call(‘改变this的指向’,给函数传参) ，最后调用该函数</p><h2 id="Funciton中prototype中的属性和方法"><a href="#Funciton中prototype中的属性和方法" class="headerlink" title="Funciton中prototype中的属性和方法"></a>Funciton中prototype中的属性和方法</h2><h3 id="Instance-properties"><a href="#Instance-properties" class="headerlink" title="Instance properties"></a>Instance properties</h3><p>Fcuntion.prototype.arguments</p><p>Fcuntion.prototype.caller</p><p>Fcuntion.prototype.displayName</p><p>Fcuntion.prototype.length</p><p>Fcuntion.prototype.name</p><h3 id="Instance-mehods"><a href="#Instance-mehods" class="headerlink" title="Instance mehods"></a>Instance mehods</h3><p>Fcuntion.prototype.apply</p><p>Fcuntion.prototype.bind</p><p>Fcuntion.prototype.call</p><p>Fcuntion.prototype.toString</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="第二部分-this和对象原型"><a href="#第二部分-this和对象原型" class="headerlink" title="第二部分 this和对象原型"></a>第二部分 this和对象原型</h1><h2 id="关于this"><a href="#关于this" class="headerlink" title="关于this"></a>关于this</h2><h3 id="1-1-为什么要用this"><a href="#1-1-为什么要用this" class="headerlink" title="1.1 为什么要用this"></a>1.1 为什么要用this</h3><p>this可以指代一个对象</p>]]></content>
       
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
       
       
     </entry>
