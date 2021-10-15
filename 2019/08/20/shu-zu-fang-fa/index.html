@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.5k 字
+      1.6k 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      21
+      22
        分钟
     </span>
   
@@ -377,9 +377,8 @@
 
 
 
-
-
-
+<h2 id="Array-from（arrayLike-mapFn-thisArg-）"><a href="#Array-from（arrayLike-mapFn-thisArg-）" class="headerlink" title="Array.from（arrayLike[,mapFn,thisArg]）"></a>Array.from（arrayLike[,mapFn,thisArg]）</h2><p>接收一个类数组的迭代对象，返回一个新数组</p>
+<figure class="highlight sas"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sas"><span class="hljs-meta">Array</span>.<span class="hljs-meta">from</span>(<span class="hljs-string">'foo'</span>)<br>// [ <span class="hljs-string">"f"</span>, <span class="hljs-string">"o"</span>, <span class="hljs-string">"o"</span> ]<br><br><br>// 数组去重<br>const <span class="hljs-meta">set</span> = new <span class="hljs-meta">Set</span>([<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>, <span class="hljs-string">'foo'</span>]);<br><span class="hljs-meta">Array</span>.<span class="hljs-meta">from</span>(<span class="hljs-meta">set</span>);<br>// [ <span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>, <span class="hljs-string">"baz"</span> ]<br><br><br>// 第二个参数可操作数组元素<br>console<span class="hljs-meta">.log(</span><span class="hljs-meta">Array</span>.<span class="hljs-meta">from</span>([1, 2, 3], <span class="hljs-meta">x</span> =&gt; <span class="hljs-meta">x</span> + <span class="hljs-meta">x</span>));<br>// expected <span class="hljs-meta">output</span>: <span class="hljs-meta">Array</span> [2, 4, 6]<br></code></pre></td></tr></tbody></table></figure>
 
 
 
@@ -420,7 +419,7 @@
                     
                       <a href="/2019/09/26/git-shi-yong/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git使用方法</span>
+                        <span class="hidden-mobile">Git常用命令</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
