@@ -18,7 +18,7 @@
   <meta name="author" content="xiekecheng">
   <meta name="keywords" content="">
   
-  <title>npm切换镜像源 - Kcc的个人博客</title>
+  <title>Mock数据简介 - Kcc的个人博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="npm切换镜像源">
+            <span class="h2" id="subtitle" title="Mock数据简介">
               
             </span>
 
@@ -227,7 +227,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">npm切换镜像源</h1>
+            <h1 style="display: none">Mock数据简介</h1>
             
             <div class="markdown-body">
               <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="Node-CommonJS"><a href="#Node-CommonJS" class="headerlink" title="Node (CommonJS)"></a>Node (CommonJS)</h2><figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 安装</span><br>npm install mockjs<br><span class="hljs-regexp">//</span> 使用 Mock<br>var Mock = require(<span class="hljs-string">'mockjs'</span>)<br>var data = Mock.mock({<br>    <span class="hljs-regexp">//</span> 属性 list 的值是一个数组，其中含有 <span class="hljs-number">1</span> 到 <span class="hljs-number">10</span> 个元素<br>    <span class="hljs-string">'list|1-10'</span>: [{<br>        <span class="hljs-regexp">//</span> 属性 id 是一个自增数，起始值为 <span class="hljs-number">1</span>，每次增 <span class="hljs-number">1</span><br>        <span class="hljs-string">'id|+1'</span>: <span class="hljs-number">1</span><br>    }]<br>})<br><span class="hljs-regexp">//</span> 输出结果<br>console.log(JSON.stringify(data, null, <span class="hljs-number">4</span>))<br></code></pre></td></tr></tbody></table></figure>
