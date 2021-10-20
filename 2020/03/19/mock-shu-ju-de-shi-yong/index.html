@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      326 字
+      429 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      5
        分钟
     </span>
   
@@ -277,7 +277,8 @@
 </li>
 <li></li>
 </ol>
-
+<h1 id="Mock-Random拓展"><a href="#Mock-Random拓展" class="headerlink" title="Mock.Random拓展"></a>Mock.Random拓展</h1><p>Mock.random中的方法与数据模板的@占位符是对应的，另外还可以为Math.Random拓展方法</p>
+<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk">Random.extend({<br>    constellations: [<span class="hljs-string">'白羊座'</span>, <span class="hljs-string">'金牛座'</span>, <span class="hljs-string">'双子座'</span>, <span class="hljs-string">'巨蟹座'</span>, <span class="hljs-string">'狮子座'</span>, <span class="hljs-string">'处女座'</span>, <span class="hljs-string">'天秤座'</span>, <span class="hljs-string">'天蝎座'</span>, <span class="hljs-string">'射手座'</span>, <span class="hljs-string">'摩羯座'</span>, <span class="hljs-string">'水瓶座'</span>, <span class="hljs-string">'双鱼座'</span>],<br>    constellation: <span class="hljs-keyword">function</span>(date){<br>        return this.pick(this.constellations)<br>    }<br>})<br>Random.constellation()<br><span class="hljs-regexp">//</span> =&gt; <span class="hljs-string">"水瓶座"</span><br>Mock.mock(<span class="hljs-string">'@CONSTELLATION'</span>)<br><span class="hljs-regexp">//</span> =&gt; <span class="hljs-string">"天蝎座"</span><br>Mock.mock({ constellation: <span class="hljs-string">'@CONSTELLATION'</span>})<br><span class="hljs-regexp">//</span> =&gt; { constellation: <span class="hljs-string">"射手座"</span> }<br></code></pre></td></tr></tbody></table></figure>
             </div>
             <hr>
             <div>
