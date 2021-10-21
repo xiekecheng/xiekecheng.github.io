@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      429 字
+      793 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      9
        分钟
     </span>
   
@@ -279,6 +279,34 @@
 </ol>
 <h1 id="Mock-Random拓展"><a href="#Mock-Random拓展" class="headerlink" title="Mock.Random拓展"></a>Mock.Random拓展</h1><p>Mock.random中的方法与数据模板的@占位符是对应的，另外还可以为Math.Random拓展方法</p>
 <figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk">Random.extend({<br>    constellations: [<span class="hljs-string">'白羊座'</span>, <span class="hljs-string">'金牛座'</span>, <span class="hljs-string">'双子座'</span>, <span class="hljs-string">'巨蟹座'</span>, <span class="hljs-string">'狮子座'</span>, <span class="hljs-string">'处女座'</span>, <span class="hljs-string">'天秤座'</span>, <span class="hljs-string">'天蝎座'</span>, <span class="hljs-string">'射手座'</span>, <span class="hljs-string">'摩羯座'</span>, <span class="hljs-string">'水瓶座'</span>, <span class="hljs-string">'双鱼座'</span>],<br>    constellation: <span class="hljs-keyword">function</span>(date){<br>        return this.pick(this.constellations)<br>    }<br>})<br>Random.constellation()<br><span class="hljs-regexp">//</span> =&gt; <span class="hljs-string">"水瓶座"</span><br>Mock.mock(<span class="hljs-string">'@CONSTELLATION'</span>)<br><span class="hljs-regexp">//</span> =&gt; <span class="hljs-string">"天蝎座"</span><br>Mock.mock({ constellation: <span class="hljs-string">'@CONSTELLATION'</span>})<br><span class="hljs-regexp">//</span> =&gt; { constellation: <span class="hljs-string">"射手座"</span> }<br></code></pre></td></tr></tbody></table></figure>
+
+<h1 id="Mock语法"><a href="#Mock语法" class="headerlink" title="Mock语法"></a>Mock语法</h1><h3 id="Mock-mock-rurl-rtype-template-function-options"><a href="#Mock-mock-rurl-rtype-template-function-options" class="headerlink" title="Mock.mock( rurl?, rtype?, template|function(options) )"></a>Mock.mock( rurl?, rtype?, template|function(options) )</h3><p>根据数据模板生成模拟数据。</p>
+<ul>
+<li><p><strong>Mock.mock( template )</strong></p>
+<p>  根据数据模板生成模拟数据。</p>
+</li>
+<li><p><strong>Mock.mock( rurl, template )</strong></p>
+<p>  记录数据模板。当拦截到匹配 <code>rurl</code> 的 Ajax 请求时，将根据数据模板 <code>template</code> 生成模拟数据，并作为响应数据返回。</p>
+</li>
+<li><p><strong>Mock.mock( rurl, function(options) )</strong></p>
+<p>  记录用于生成响应数据的函数。当拦截到匹配 <code>rurl</code> 的 Ajax 请求时，函数 <code>function(options)</code> 将被执行，并把执行结果作为响应数据返回。</p>
+</li>
+<li><p><strong>Mock.mock( rurl, rtype, template )</strong></p>
+<p>  记录数据模板。当拦截到匹配 <code>rurl</code> 和 <code>rtype</code> 的 Ajax 请求时，将根据数据模板 <code>template</code> 生成模拟数据，并作为响应数据返回。</p>
+</li>
+<li><p><strong>Mock.mock( rurl, rtype, function(options) )</strong></p>
+<p>  记录用于生成响应数据的函数。当拦截到匹配 <code>rurl</code> 和 <code>rtype</code> 的 Ajax 请求时，函数 <code>function(options)</code> 将被执行，并把执行结果作为响应数据返回。</p>
+</li>
+</ul>
+<p><strong>参数的含义和默认值</strong>如下所示：</p>
+<ul>
+<li><strong>参数 rurl</strong>：可选。表示需要拦截的 URL，可以是 URL 字符串或 URL 正则。例如 <code>/\/domain\/list\.json/</code>、<code>'/domian/list.json'</code>。</li>
+<li><strong>参数 rtype</strong>：可选。表示需要拦截的 Ajax 请求类型。例如 <code>GET</code>、<code>POST</code>、<code>PUT</code>、<code>DELETE</code> 等。</li>
+<li><strong>参数 template</strong>：可选。表示数据模板，可以是对象或字符串。例如 <code>{ 'data|1-10':[{}] }</code>、<code>'@EMAIL'</code>。</li>
+<li>**参数 function(options)**：可选。表示用于生成响应数据的函数。</li>
+<li><strong>参数 options</strong>：指向本次请求的 Ajax 选项集。</li>
+</ul>
+
             </div>
             <hr>
             <div>
