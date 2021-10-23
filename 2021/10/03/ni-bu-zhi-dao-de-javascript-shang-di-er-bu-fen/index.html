@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      453 字
+      590 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      7
        分钟
     </span>
   
@@ -269,6 +269,8 @@
 <h4 id="2-禁止拓展"><a href="#2-禁止拓展" class="headerlink" title="2. 禁止拓展"></a>2. 禁止拓展</h4><p>使用Object.preventExtensions(…) 可以禁止一个对象添加新属性并保留已有属性</p>
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> obj = {<br>	<span class="hljs-attr">name</span>:<span class="hljs-string">'jack'</span><br>}<br><span class="hljs-comment">// 保留原有属性,禁止拓展属性</span><br><span class="hljs-built_in">Object</span>.preventExtensions(obj)<br>obj.age = <span class="hljs-number">33</span><br><span class="hljs-built_in">console</span>.log(obj);<br><span class="hljs-comment">// { name: 'jack' }</span><br></code></pre></td></tr></tbody></table></figure>
 
+<h4 id="3-密封"><a href="#3-密封" class="headerlink" title="3. 密封"></a>3. 密封</h4><p>Object.seal(…)会创建一个‘密封’的对象，这个方法实际上是会调用Object.preventExtensions,并把所有属性标记为configurable:false，被密封之后，不能添加新属性，也不能重新配置或删除任何现有属性（但是可以修改属性的值）</p>
+<h4 id="4-冻结"><a href="#4-冻结" class="headerlink" title="4. 冻结"></a>4. 冻结</h4><p>Object.freeze(..) 会创建一个冻结对象，这个方法实际上会在一个现有对象上调用 Object.seal(..) 并把所有“数据访问”属性标记为 writable:false，这样就无法修改它们的值。</p>
 
             </div>
             <hr>
