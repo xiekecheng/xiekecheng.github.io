@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="在JSON定义中，对KEY都需要加双引号“”，并且不可以添加注释，那么当我们想要给JSON字符串添加注释，并且key不用加上双引号，这样比较符合我们的书写习惯，那么该如何解决呢？这时可以使用到JSON5">
+  <meta name="description" content="this is my blog">
   <meta name="author" content="xiekecheng">
   <meta name="keywords" content="">
   
-  <title>使用JSON5解决JSON不可加注释问题 - Kcc的个人博客</title>
+  <title>吸顶效果实现 - Kcc的个人博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="使用JSON5解决JSON不可加注释问题">
+            <span class="h2" id="subtitle" title="吸顶效果实现">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-10-20 10:36" pubdate>
-        2021年10月20日 上午
+      <time datetime="2021-10-26 17:43" pubdate>
+        2021年10月26日 下午
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      507 字
+      300 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      5
        分钟
     </span>
   
@@ -227,43 +227,11 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">使用JSON5解决JSON不可加注释问题</h1>
+            <h1 style="display: none">吸顶效果实现</h1>
             
             <div class="markdown-body">
-              <p>在JSON定义中，对KEY都需要加双引号“”，并且不可以添加注释，那么当我们想要给JSON字符串添加注释，并且key不用加上双引号，这样比较符合我们的书写习惯，那么该如何解决呢？这时可以使用到JSON5</p>
-<span id="more"></span>
-
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>使用npm安装json5</p>
-<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm i json5 --save<br></code></pre></td></tr></tbody></table></figure>
-
-<h1 id="JSON5常用API"><a href="#JSON5常用API" class="headerlink" title="JSON5常用API"></a>JSON5常用API</h1><h3 id="JSON5-parse"><a href="#JSON5-parse" class="headerlink" title="JSON5.parse()"></a>JSON5.parse()</h3><p>Parses a JSON5 string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned.</p>
-<h4 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h4><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">JSO<span class="hljs-symbol">N5</span>.parse<span class="hljs-comment">(text[, reviver])</span><br></code></pre></td></tr></tbody></table></figure>
-
-<h4 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h4><ul>
-<li><code>text</code>: The string to parse as JSON5.</li>
-<li><code>reviver</code>: If a function, this prescribes how the value originally produced by parsing is transformed, before being returned.</li>
-</ul>
-<h4 id="Return-value"><a href="#Return-value" class="headerlink" title="Return value"></a>Return value</h4><p>The object corresponding to the given JSON5 text.</p>
-<h3 id="JSON5-stringify"><a href="#JSON5-stringify" class="headerlink" title="JSON5.stringify()"></a>JSON5.stringify()</h3><p>Converts a JavaScript value to a JSON5 string, optionally replacing values if a replacer function is specified, or optionally including only the specified properties if a replacer array is specified.</p>
-<h4 id="Syntax-1"><a href="#Syntax-1" class="headerlink" title="Syntax"></a>Syntax</h4><figure class="highlight reasonml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">JSON5</span>.</span></span>stringify(value<span class="hljs-literal">[, <span class="hljs-identifier">replacer</span>[, <span class="hljs-identifier">space</span>]</span>])<br><span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">JSON5</span>.</span></span>stringify(value<span class="hljs-literal">[, <span class="hljs-identifier">options</span>]</span>)<br></code></pre></td></tr></tbody></table></figure>
-
-<h4 id="Parameters-1"><a href="#Parameters-1" class="headerlink" title="Parameters"></a>Parameters</h4><ul>
-<li><code>value</code>: The value to convert to a JSON5 string.</li>
-<li><code>replacer</code>: A function that alters the behavior of the stringification process, or an array of String and Number objects that serve as a whitelist for selecting/filtering the properties of the value object to be included in the JSON5 string. If this value is null or not provided, all properties of the object are included in the resulting JSON5 string.</li>
-<li><code>space</code>: A String or Number object that’s used to insert white space into the output JSON5 string for readability purposes. If this is a Number, it indicates the number of space characters to use as white space; this number is capped at 10 (if it is greater, the value is just 10). Values less than 1 indicate that no space should be used. If this is a String, the string (or the first 10 characters of the string, if it’s longer than that) is used as white space. If this parameter is not provided (or is null), no white space is used. If white space is used, trailing commas will be used in objects and arrays.</li>
-</ul>
-<ul>
-<li><p>options: An object with the following properties:</p>
-<p>  <code>replacer</code>: Same as the <code>replacer</code> parameter.</p>
-<p>  <code>space</code>: Same as the <code>space</code> parameter.</p>
-<p>  <code>quote</code>: A String representing the quote character to use when serializing strings.</p>
-</li>
-</ul>
-<h4 id="Return-value-1"><a href="#Return-value-1" class="headerlink" title="Return value"></a>Return value</h4><p>A JSON5 string representing the value.</p>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>可以在vscode中安装<code>JSON5 syntax</code>插件来识别json5文件</p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-comment">// test.json5</span><br>{<br>  name:'jack', <span class="hljs-comment">// 名称</span><br>  age:<span class="hljs-number">18</span>,<span class="hljs-comment">// 年龄</span><br>  hobby:'football'<span class="hljs-comment">// 爱好</span><br>}<br><br></code></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// testJSON5.js</span><br><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>)<br><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>)<br><span class="hljs-keyword">const</span> JSON5 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'json5'</span>)<br><span class="hljs-comment">// 读取json5文件,utf-8编码格式</span><br><span class="hljs-keyword">const</span> json = fs.readFileSync(path.resolve(__dirname,<span class="hljs-string">'./test.json5'</span>))<br><br><span class="hljs-comment">// 使用json5解析成Object</span><br>cosnt obj = JSON5.parse(json)<br><br></code></pre></td></tr></tbody></table></figure>
+              <p>在网页中，对导航栏经常会用到吸顶效果，下面是简单使用jQuery+css实现简单的吸顶效果，还增加了节流函数，在多次滚动的情况下可以节约性能。</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge"</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">		* {</span><br><span class="css">			<span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;</span><br><span class="css">			<span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;</span><br><span class="css">		}</span><br><span class="css"></span><br><span class="css">		<span class="hljs-selector-class">.header</span>,</span><br><span class="css">		<span class="hljs-selector-class">.nav</span>,</span><br><span class="css">		<span class="hljs-selector-class">.con</span>,</span><br><span class="css">		<span class="hljs-selector-class">.footer</span> {</span><br><span class="css">			<span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;</span><br><span class="css"></span><br><span class="css">		}</span><br><span class="css"></span><br><span class="css">		<span class="hljs-selector-class">.header</span>,</span><br><span class="css">		<span class="hljs-selector-class">.footer</span> {</span><br><span class="css">			<span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;</span><br><span class="css">			<span class="hljs-attribute">background-color</span>: aquamarine;</span><br><span class="css">		}</span><br><span class="css"></span><br><span class="css">		<span class="hljs-selector-class">.nav</span> {</span><br><span class="css">			<span class="hljs-attribute">height</span>: <span class="hljs-number">150px</span>;</span><br><span class="css">			<span class="hljs-attribute">background-color</span>: pink;</span><br><span class="css">		}</span><br><span class="css"></span><br><span class="css">		<span class="hljs-selector-class">.con</span> {</span><br><span class="css">			<span class="hljs-attribute">height</span>: <span class="hljs-number">2000px</span>;</span><br><span class="css">			<span class="hljs-attribute">background-color</span>: bisque;</span><br><span class="css">		}</span><br><span class="css">	</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header"</span>&gt;</span>header<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav"</span>&gt;</span>分类<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"con"</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer"</span>&gt;</span>footer<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript"></span><br><span class="javascript">		<span class="hljs-keyword">let</span> divs = $(<span class="hljs-string">'div'</span>)</span><br><span class="javascript">		$(<span class="hljs-built_in">window</span>).scroll(throttle(fn, <span class="hljs-number">42</span>))</span><br><span class="javascript"></span><br><span class="javascript">		<span class="hljs-comment">// 业务函数</span></span><br><span class="javascript">		<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{</span><br><span class="javascript">			<span class="hljs-keyword">let</span> st = <span class="hljs-built_in">document</span>.documentElement.scrollTop || <span class="hljs-built_in">document</span>.body.scrollTop</span><br><span class="javascript">			<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'st'</span>, st);</span><br><span class="javascript">			<span class="hljs-comment">// 滚动条滚动大于200,则将header吸顶</span></span><br><span class="javascript">			<span class="hljs-keyword">if</span> (st &gt; <span class="hljs-number">200</span>) {</span><br><span class="javascript">				divs[<span class="hljs-number">1</span>].style = <span class="hljs-string">'position:fixed;top:0;width:100%'</span></span><br><span class="javascript">			} <span class="hljs-keyword">else</span> {</span><br><span class="javascript">				divs[<span class="hljs-number">1</span>].style = <span class="hljs-string">'position:static'</span></span><br><span class="javascript">			}</span><br><span class="javascript">		}</span><br><span class="javascript">		<span class="hljs-comment">// 节流函数</span></span><br><span class="javascript">		<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttle</span>(<span class="hljs-params">callback, delay</span>) </span>{</span><br><span class="javascript">			<span class="hljs-keyword">let</span> flag = <span class="hljs-literal">true</span></span><br><span class="javascript">			<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{</span><br><span class="javascript">				<span class="hljs-keyword">if</span> (flag) {</span><br><span class="javascript">					<span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {</span><br><span class="javascript">						callback()</span><br><span class="javascript">						flag = <span class="hljs-literal">true</span></span><br><span class="javascript">					}, delay)</span><br><span class="javascript">				}</span><br><span class="javascript">				flag = <span class="hljs-literal">false</span></span><br><span class="javascript">			}</span><br><span class="javascript">		}</span><br><span class="javascript">	</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></tbody></table></figure>
 
 
             </div>
@@ -271,13 +239,13 @@
             <div>
               <div class="post-metas mb-3">
                 
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/tags/JSON/">JSON</a>
+                      <a class="hover-with-bg" href="/categories/JavaScript/">JavaScript</a>
                     
                   </div>
+                
                 
               </div>
               
@@ -292,18 +260,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/10/26/jian-dan-shi-xian-dao-hang-lan-xi-ding-xiao-guo/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">吸顶效果实现</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/10/10/http-xie-yi/">
-                        <span class="hidden-mobile">HTTP协议介绍</span>
+                      <a href="/2021/10/20/shi-yong-json5-jie-jue-json-bu-ke-jia-zhu-shi-wen-ti/">
+                        <span class="hidden-mobile">使用JSON5解决JSON不可加注释问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
