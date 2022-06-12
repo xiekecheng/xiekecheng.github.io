@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>数组排序方法一览</title>
+      <link href="2022/06/11/shu-zu-pai-xu-fang-fa-yi-lan/"/>
+      <url>2022/06/11/shu-zu-pai-xu-fang-fa-yi-lan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>排序算法是比较重要的,下面介绍几种常规的排序算法</p><h2 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h2><p>排序思想: 相邻两个元素比较大小,如果前一个元素大于后一个元素,则交换两者位置</p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bubbleSort</span>(<span class="hljs-params">arr</span>)</span>{<br><span class="hljs-keyword">const</span> length = arr.length<br><span class="hljs-keyword">let</span> temp<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;length-<span class="hljs-number">1</span>;i++){<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j=<span class="hljs-number">0</span>;j&lt;length-<span class="hljs-number">1</span>-i;j++){<br><span class="hljs-keyword">if</span>(arr[j]&gt;arr[j+<span class="hljs-number">1</span>]){<br><span class="hljs-comment">// 交换两个元素的位置</span><br>tem = arr[j]<br>arr[j] = arr[j+<span class="hljs-number">1</span>]<br>arr[j+<span class="hljs-number">1</span>] = tem<br>}<br>}<br>}<br>}<br></code></pre></td></tr></tbody></table></figure><h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2. 选择排序"></a>2. 选择排序</h2><p>排序思想: </p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">selectionSort</span>(<span class="hljs-params"></span>)</span>{<br>  <br>}<br></code></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用GitHub Pages部署前端项目</title>
       <link href="2022/05/25/shi-yong-github-pages-bu-shu-qian-duan-xiang-mu/"/>
       <url>2022/05/25/shi-yong-github-pages-bu-shu-qian-duan-xiang-mu/</url>
